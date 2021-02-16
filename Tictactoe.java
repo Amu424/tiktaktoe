@@ -38,10 +38,25 @@ public static void disBoard (char[]board) {
 	System.out.println(board);
 	
 }
+public static void mkMove(char[]board) {               //for making move on board
+	Scanner sc1=new Scanner(System.in);
+	System.out.println("Enter location where you want");
+	int location=sc1.nextInt();
+	if(0 < location && location<10) {
+		if(board[location]==' ') {
+			System.out.println(" Your input is at valid location");
+		}
+		else {
+			System.out.println("Your input is invalid");
+		}
+	}
+	sc1.close();
+}
 	public static void main(String[] args) {
 			board();
 			mkChoice();
 			disBoard(board());
+			mkMove(board());
 	}
 
 }
